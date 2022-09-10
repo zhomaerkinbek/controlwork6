@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login form</title>
+<style>
+    .nameofweek{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        justify-items: center;
+        justify-content: stretch;
+        text-align: center;
+    }
+    .days{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 160px;
+    justify-content: center;
+    }
+    .day{
+    display: flex;
+    background-color: #d9d9d9;
+    position: relative;
+    width: 100%;
+    height: 160px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    }
+    .current{
+    background-color: red;
+    }
+    .stretched-link::after{
+        position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    content: "";
+    }
+    .day:hover{
+    background-color: #a1f4e0;
+  }
+  .cube{
+  width: 30px;
+  height: 30px;
+  }
+  .red{
+  background-color: red;
+  }
+    .green{
+  background-color: green;
+  }
+    .blue{
+  background-color: blue;
+  }
+    .black{
+  background-color: black;
+  }
+    .brown{
+  background-color: brown;
+  }
+  .tasks{
+  display: flex;}
+</style>
+</head>
+<body>
+<h1>Планировщик задач на ${currentMonth}</h1>
+<div class="nameofweek">
+    <div>
+        <p>Понедельник</p>
+    </div>
+    <div>
+        <p>Вторник</p>
+    </div>
+    <div>
+        <p>Среда</p>
+    </div>
+    <div>
+        <p>Четверг</p>
+    </div>
+    <div>
+        <p>Пятница</p>
+    </div>
+    <div>
+        <p>Суббота</p>
+    </div>
+    <div>
+        <p>Воскресенье</p>
+    </div>
+    <#assign y=daysInMonth>
+    <#if (dayOfWeek > 1)>
+    <#list 1..dayOfWeek - 1 as x>
+    <div class="days">
+    </div>
+    </#list>
+    </#if>
+<#list days as day>
+    <#if currentDay == day.date.getDayOfMonth()>
+    <div class="day current">
+        <p>${day.date.getDayOfMonth()}</p>
+        <#if day.tasks??>
+        <div class="tasks"><#list day.tasks as task>
+            <div class="cube ${task.type.getColor()}"></div>
+        </#list></div>
+        </#if>
+        <a href="/tasks?date=${day.date}" class="stretched-link"></a>
+    </div>
+    <#else>
+    <div class="day">
+        <p>${day.date.getDayOfMonth()}</p>
+        <#if day.tasks??>
+        <div class="tasks"><#list day.tasks as task>
+            <div class="cube ${task.type.getColor()}"></div>
+        </#list></div>
+
+        </#if>
+        <a href="/tasks?date=${day.date}" class="stretched-link"></a>
+    </div>
+</#if>
+</#list>
+</div>
+
+<script src="/assets/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
