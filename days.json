@@ -2,10 +2,10 @@
   {
     "tasks": [
       {
-        "taskId": "Efficitu",
-        "name": "Sollicitudin eu, faucibus interdu.",
-        "description": "Ut tempus. libero posuere, est quam, accumsan mattis lectus, sapien. tristique. tellus euismod, semper.",
-        "type": "ORDINARY"
+        "taskId": "Quis",
+        "name": "Mamma mia",
+        "description": "Mi, bibendum nisl. mi, odio augue, vestibulum, ultricies. tellus eu, tempus nulla. purus lorem porttitor finibus. sapien. vitae ut. dui. tempor finibus et, dui purus. tincidunt. erat, tortor. maximus.",
+        "type": "SHOPPING"
       }
     ],
     "date": {
@@ -125,7 +125,14 @@
     "nameOfDate": "10 сентября 2022 г."
   },
   {
-    "tasks": [],
+    "tasks": [
+      {
+        "taskId": "Nisi",
+        "name": "Ultrices interdu.",
+        "description": "Aliquet urna, interdum nisi. urna massa, ultricies. erat at sodales dapibus, ridiculus adipiscing commodo egestas. blandit et rhoncus nulla, magna vitae leo. cubilia ut. sapien. leo mollis, consequat.",
+        "type": "ORDINARY"
+      }
+    ],
     "date": {
       "year": 2022,
       "month": 9,
