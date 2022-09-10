@@ -19,23 +19,5 @@ public class Main {
         } catch (IOException e) {
             e.printStackTrace();
         }
-//        LocalDate currentDate = LocalDate.now();
-//        var dow = currentDate.getDayOfWeek().getValue();
-//        int dom = currentDate.getDayOfMonth();
-//        int doy = currentDate.getDayOfYear();
-//        String m = currentDate.getMonth().getDisplayName(TextStyle.FULL_STANDALONE, new Locale("ru"));
-//        int y = currentDate.getYear();
-//        System.out.println("current local date : " + currentDate);
-//        System.out.println("dayOfWeek from a date in Java 8 : " + dow);
-//        System.out.println("dayOfMonth from date in JDK 8: " + dom);
-//        System.out.println("dayOfYear from a date in Java SE 8 : " + doy);
-//        System.out.println("month from a date in Java 1.8 : " + m);
-//        System.out.println("year from date in JDK 1.8 : " + y);
-//        var calen = new CalendarModel();
-//        System.out.println(calen.getDays());
-//
-//        calendarModel.getDays().get(0).getTasks().add(new Task("asd", "asds", "asd", Arrays.stream(TypeOfTask.values()).filter(e -> e.getName().equalsIgnoreCase("обычная задача")).findFirst().get()));
-//        System.out.println(calendarModel.getDays().get(0).getTasks().get(0).getType());
-//        CalendarModel.writeFile(calendarModel.getDays());
     }
 }
